@@ -11,6 +11,7 @@ import ( "webserver/pkg/handlers")
 func main() {
 
 	http.HandleFunc("/health", handlers.HandleHealth);
+	http.HandleFunc("/healthPost", handlers.PostHealth);
 	// starting server 
 	fmt.Println("Listening on localhost:6600");
 	if err := http.ListenAndServe(":6600", nil); err != nil{
